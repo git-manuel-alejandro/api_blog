@@ -1,8 +1,9 @@
+from dataclasses import field
 from rest_framework import serializers
 from users.models import User
 
 
-class UserSerializers(serializers.ModelSerializer):
+class UserRegisterSerializers(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'email', 'username', 'password']
@@ -15,3 +16,9 @@ class UserSerializers(serializers.ModelSerializer):
             instance.set_password(password)
         instance.save()
         return instance
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'email', 'username', 'first_name', 'last_name']
