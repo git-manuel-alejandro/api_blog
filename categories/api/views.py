@@ -1,4 +1,3 @@
-from cgitb import lookup
 from rest_framework.viewsets import ModelViewSet
 from categories.models import Category
 from categories.api.serializers import CategorySerializer
