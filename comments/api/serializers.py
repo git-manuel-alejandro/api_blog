@@ -5,7 +5,7 @@ from comments.models import Commet
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Commet
-        fields = '__all__'
+        fields = ['content', 'created_at', 'user', 'post']
 
 
 # s
