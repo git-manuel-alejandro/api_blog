@@ -1,5 +1,3 @@
-from pyexpat import model
-from unicodedata import category
 from rest_framework import serializers
 from posts.models import Post
 

@@ -20,6 +20,7 @@ from drf_yasg import openapi
 
 from categories.api.routers import router_categories  # ModelViewSet
 from posts.api.routers import router_posts  # ModelViewSet
+from comments.api.routers import router_comments  # ModelViewSet
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -45,4 +46,8 @@ urlpatterns = [
 
     path('api/', include(router_categories.urls)),  # ModelViewSet
     path('api/', include(router_posts.urls)),  # ModelViewSet
+    path('api/', include(router_comments.urls)),  # ModelViewSet
+
+
+
 ]
